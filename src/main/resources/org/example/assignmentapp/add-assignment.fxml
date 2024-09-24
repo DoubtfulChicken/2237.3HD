@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
+      fx:controller="org.example.assignmentapp.controller.AddAssignmentController">
+
+    <Label text="Unit Code"/>
+    <TextField fx:id="unitCodeField"/>
+
+    <Label text="Task Name"/>
+    <TextField fx:id="taskNameField"/>
+
+    <Label text="Grade"/>
+    <TextField fx:id="gradeField"/>
+
+    <Label text="Start Date"/>
+    <TextField fx:id="startDateField"/>
+
+    <Label text="Due Date"/>
+    <TextField fx:id="dueDateField"/>
+
+    <Label text="Status"/>
+    <TextField fx:id="statusField"/>
+
+    <Button text="Add Assignment" onAction="#handleAddAssignment"/>
+
+</VBox>

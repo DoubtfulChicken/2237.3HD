@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
+      fx:controller="org.example.assignmentapp.controller.MainController">
+    <Button text="Add Assignment" onAction="#handleAddAssignment"/>
+    <Button text="Import Data From Spreadsheet" onAction="#handleImport"/>
+
+    <TableView fx:id="assignmentTable">
+        <columns>
+            <TableColumn fx:id="unitCodeColumn" text="Unit Code"/>
+            <TableColumn fx:id="taskNameColumn" text="Task Name"/>
+            <TableColumn fx:id="gradeColumn" text="Grade"/> <!-- Moved Grade up -->
+            <TableColumn fx:id="startDateColumn" text="Start Date"/>
+            <TableColumn fx:id="dueDateColumn" text="Due Date"/>
+            <TableColumn fx:id="daysUntilStartColumn" text="Days Until Start"/>
+            <TableColumn fx:id="daysUntilDueColumn" text="Days Until Due"/>
+            <TableColumn fx:id="statusColumn" text="Status"/>
+        </columns>
+    </TableView>
+</VBox>
