@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building the application...'
-                    sh 'mvn clean package'
+                    bat 'mvn clean package'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     echo 'Running tests...'
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying the application...'
-                    // Add your deployment commands here, e.g., copying artifacts to a server
+                    // Add your Windows deployment commands here
                 }
             }
         }
