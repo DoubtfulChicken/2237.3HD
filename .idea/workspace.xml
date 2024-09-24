@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4365c28-09ef-4ced-94b3-8ddc1c79d140" name="Changes" comment="Initial Commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-    </list>
+    <list default="true" id="b4365c28-09ef-4ced-94b3-8ddc1c79d140" name="Changes" comment="Initial Commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,19 +21,67 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DoubtfulChicken/SIT223_HD.git",
-    "accountId": "65968da0-f385-4328-97f9-8d7b8f322a22"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DoubtfulChicken/SIT223_HD.git&quot;,
+    &quot;accountId&quot;: &quot;65968da0-f385-4328-97f9-8d7b8f322a22&quot;
   }
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AssignmentTrackerApp.executor": "Run",
+    "JUnit.All in AssignmentApp.executor": "Run",
+    "Maven.AssignmentApp [clean,install].executor": "Run",
+    "Maven.AssignmentApp [clean].executor": "Run",
+    "Maven.AssignmentApp [dependency:analyze].executor": "Run",
+    "Maven.AssignmentApp [dependency:tree].executor": "Run",
+    "Maven.AssignmentApp [depenency:analyze].executor": "Run",
     "git-widget-placeholder": "main",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean install" />
+      <command value="mvn dependency:tree" />
+      <command value="mvn depenency:analyze" />
+      <command value="mvn dependency:analyze" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.AssignmentTrackerApp">
+    <configuration name="AssignmentTrackerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.assignmentapp.AssignmentTrackerApp" />
+      <module name="AssignmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.assignmentapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in AssignmentApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AssignmentApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AssignmentTrackerApp" />
+        <item itemvalue="JUnit.All in AssignmentApp" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <servers />
   </component>
@@ -50,5 +95,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>
