@@ -4,6 +4,12 @@ pipeline {
         jdk 'Java21-JDK'
     }
     stages {
+        stage('Check Environment') {
+            steps {
+                bat 'echo %JAVA_HOME%'
+                bat 'java -version'
+            }
+        }
         stage('Build') {
             steps {
                 script {
