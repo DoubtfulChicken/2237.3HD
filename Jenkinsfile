@@ -38,24 +38,24 @@ pipeline {
             }
         }
        stage('Deploy to Tomcat') {
-            steps {
-                script {
-                    // Define environment variables for Tomcat deployment
-                    def WAR_FILE = 'C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/AssignmentTracker_Pipeline/target/AssignmentApp-1.0-SNAPSHOT.war' 
-                    def TOMCAT_USER = 'admin'
-                    def TOMCAT_PASS = 'admin'
-                    def TOMCAT_URL = 'http://localhost:8090'  // Update to your Tomcat URL and port
-                    def DEPLOY_PATH = "http://localhost:8090/manager/text/deploy?path=/your-app&update=true"  // Update the path
+    steps {
+        script {
+            // Define environment variables for Tomcat deployment
+            def WAR_FILE = 'C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/AssignmentTracker_Pipeline/target/AssignmentApp-1.0-SNAPSHOT.war'
+            def TOMCAT_USER = 'admin'  // Tomcat Manager user
+            def TOMCAT_PASS = 'admin'  // Tomcat Manager password
+            def TOMCAT_URL = 'http://localhost:8090'  // Tomcat running on port 8090
+            def DEPLOY_PATH = "${TOMCAT_URL}/manager/text/deploy?path=/AssignmentApp&update=true"  // Assign context path as AssignmentApp
 
-                    // Use curl to deploy the WAR file to Tomcat
-                    bat """
-                    curl --upload-file ${WAR_FILE} \
-                         --user ${TOMCAT_USER}:${TOMCAT_PASS} \
-                         ${DEPLOY_PATH}
-                    """
-                }
-            }
+            // Use curl to deploy the WAR file to Tomcat
+            bat """
+            curl --upload-file ${WAR_FILE} \
+                 --user ${TOMCAT_USER}:${TOMCAT_PASS} \
+                 "${DEPLOY_PATH}"
+            """
         }
+    }
+}
         
         stage('Release') {
             steps {
