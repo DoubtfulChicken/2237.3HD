@@ -4,7 +4,7 @@ FROM openjdk:21-jdk-slim
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the final JAR file (including JavaFX dependencies) to the container
+# Copy the final JAR file (with all dependencies) to the container
 COPY target/AssignmentApp-1.0-SNAPSHOT.jar /app/assignmentapp.jar
 
 # Run the JAR file
