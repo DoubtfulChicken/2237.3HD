@@ -3,6 +3,10 @@ pipeline {
     tools {
         jdk 'Java21-JDK'
     }
+
+    environment {
+    GITHUB_TOKEN = credentials('github-token') 
+    }
     stages {
         stage('Check Environment') {
             steps {
@@ -59,9 +63,16 @@ pipeline {
         
         stage('Release') {
             steps {
-                echo 'Running the Release stage...'
+                createGitHubRelease repository: 'DoubtfulChicken/2237.3HD',
+                                    tag: "v1.0.${env.BUILD_NUMBER}",
+                                    name: "Release v1.0.${env.BUILD_NUMBER}",
+                                    bodyText: "Release notes for build ${env.BUILD_NUMBER}",
+                                    draft: false,
+                                    prerelease: false,
+                                    credentialId: 'github-token'
             }
         }
+        
         stage('Monitoring and Alerting') {
             steps {
                 echo 'Running the Monitoring and Alerting stage...'
