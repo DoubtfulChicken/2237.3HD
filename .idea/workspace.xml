@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4365c28-09ef-4ced-94b3-8ddc1c79d140" name="Changes" comment="Initial Commit" />
+    <list default="true" id="b4365c28-09ef-4ced-94b3-8ddc1c79d140" name="Changes" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +56,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.AssignmentTrackerApp.executor": "Run",
+    "Application.Main.executor": "Run",
     "JUnit.All in AssignmentApp.executor": "Run",
     "JUnit.AssignmentTest.executor": "Run",
     "Maven.AssignmentApp [clean,install].executor": "Run",
@@ -92,13 +96,26 @@
       <command value="mvn depenency:analyze" />
       <command value="mvn dependency:analyze" />
       <command value="mvn clean install" />
-      <command value="mvn clean package" />
       <command value="mvn dependency:tree" />
+      <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.AssignmentTrackerApp">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AssignmentTrackerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.assignmentapp.AssignmentTrackerApp" />
+      <module name="AssignmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.assignmentapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.assignmentapp.Main" />
       <module name="AssignmentApp" />
       <extension name="coverage">
         <pattern>
@@ -195,6 +212,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.AssignmentTrackerApp" />
         <item itemvalue="JUnit.AssignmentTest" />
         <item itemvalue="JUnit.All in AssignmentApp" />
@@ -224,6 +242,7 @@
       <workItem from="1727254204481" duration="281000" />
       <workItem from="1727255394188" duration="1497000" />
       <workItem from="1727261008976" duration="788000" />
+      <workItem from="1727263669718" duration="1166000" />
     </task>
     <servers />
   </component>
