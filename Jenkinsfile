@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     // Compile and package the application using Maven
-                    sh 'mvn clean package'
+                    bat 'mvn clean package'
                 }
             }
         }
