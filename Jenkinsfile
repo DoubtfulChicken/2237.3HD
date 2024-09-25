@@ -23,7 +23,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    // Run unit tests using Maven
+                    // Run JUnit tests using Maven
                     bat 'mvn test'
                 }
             }
