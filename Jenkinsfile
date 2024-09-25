@@ -25,7 +25,7 @@ pipeline {
                 script {
                     // Run JUnit tests using Maven
                     bat 'mvn test'
-                    // List the contents of the target directory to verify the JAR is built
+                    // Verify WAR file in the target directory
                     bat 'dir target'
                 }
             }
@@ -41,7 +41,7 @@ pipeline {
             steps {
                 script {
                     // Define environment variables for Tomcat deployment
-                    def WAR_FILE = 'target/your-javafx-app.war'  // Update with your WAR file name
+                    def WAR_FILE = 'C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/AssignmentTracker_Pipeline/target/AssignmentApp-1.0-SNAPSHOT.war' 
                     def TOMCAT_USER = 'admin'
                     def TOMCAT_PASS = 'admin'
                     def TOMCAT_URL = 'http://localhost:8090'  // Update to your Tomcat URL and port
@@ -49,9 +49,9 @@ pipeline {
 
                     // Use curl to deploy the WAR file to Tomcat
                     bat """
-                    curl --upload-file target/APPENDWITHNEW.war \
-                         --user admin:admin \
-                         http://localhost:8090/manager/text/deploy?path=/your-app&update=true
+                    curl --upload-file ${WAR_FILE} \
+                         --user ${TOMCAT_USER}:${TOMCAT_PASS} \
+                         ${DEPLOY_PATH}
                     """
                 }
             }
