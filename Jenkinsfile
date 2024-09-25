@@ -38,7 +38,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    bat 'docker build -t assignmentapp:latest .'  // Build the Docker image
+                    bat 'docker build -t assignmentapp:latest .'  
                 }
             }
         }
@@ -46,7 +46,7 @@ pipeline {
         stage('Deploy Docker Container') {
             steps {
                 script {
-                    bat 'docker run -d -p 8080:8080 --name assignmentapp assignmentapp:latest'  // Run the Docker container
+                    bat 'docker run -d -p 8080:8080 --name assignmentapp assignmentapp:latest'
                 }
             }
         }
