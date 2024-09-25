@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools {
         jdk 'Java21-JDK'
+        maven 'Default Maven'
     }
     stages {
         stage('Build') {
@@ -20,9 +21,11 @@ pipeline {
                 }
             }
         }
-        stage('Code Quality Analysis') {
+        stage('SonarQube Analysis') {
             steps {
-                echo 'Running the Code Quality Analysis stage...'
+                withSonarQubeEnv('SonarQube') {
+                    bat '"%MAVEN_HOME%/bin/mvn" clean verify sonar:sonar -Dsonar.projectKey=AssignmentTrackerSonar -Dsonar.projectName="AssignmentTrackerSonar"'
+                }
             }
         }
         stage('Deploy') {
