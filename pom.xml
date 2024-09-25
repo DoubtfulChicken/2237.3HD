@@ -136,7 +136,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>org.example.assignmentapp.AssignmentTrackerApp</mainClass>git
+                                    <mainClass>org.example.assignmentapp.Main</mainClass>git
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -151,7 +151,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>org.example.assignmentapp.AssignmentTrackerApp</mainClass> <!-- Your main class -->
+                            <mainClass>org.example.assignmentapp.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4365c28-09ef-4ced-94b3-8ddc1c79d140" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/assignmentapp/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignmentapp/AssignmentTrackerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignmentapp/AssignmentTrackerApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,7 +44,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -52,29 +55,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AssignmentTrackerApp.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in AssignmentApp.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssignmentTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.AssignmentApp [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.AssignmentApp [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.AssignmentApp [dependency:analyze].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.AssignmentApp [dependency:tree].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.AssignmentApp [depenency:analyze].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Debugger_Data_Views_Java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AssignmentTrackerApp.executor": "Run",
+    "JUnit.All in AssignmentApp.executor": "Run",
+    "JUnit.AssignmentTest.executor": "Run",
+    "Maven.AssignmentApp [clean,install].executor": "Run",
+    "Maven.AssignmentApp [clean,package].executor": "Run",
+    "Maven.AssignmentApp [clean].executor": "Run",
+    "Maven.AssignmentApp [dependency:analyze].executor": "Run",
+    "Maven.AssignmentApp [dependency:tree].executor": "Run",
+    "Maven.AssignmentApp [depenency:analyze].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Debugger_Data_Views_Java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -91,9 +98,10 @@
       <command value="mvn dependency:analyze" />
       <command value="mvn dependency:tree" />
       <command value="mvn clean install" />
+      <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AssignmentTest">
+  <component name="RunManager" selected="Application.AssignmentTrackerApp">
     <configuration name="AssignmentTrackerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.assignmentapp.AssignmentTrackerApp" />
       <module name="AssignmentApp" />
@@ -192,8 +200,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AssignmentTest" />
         <item itemvalue="Application.AssignmentTrackerApp" />
+        <item itemvalue="JUnit.AssignmentTest" />
         <item itemvalue="JUnit.All in AssignmentApp" />
       </list>
     </recent_temporary>
@@ -219,6 +227,7 @@
       <workItem from="1727251500154" duration="14000" />
       <workItem from="1727253329456" duration="256000" />
       <workItem from="1727254204481" duration="281000" />
+      <workItem from="1727255394188" duration="1345000" />
     </task>
     <servers />
   </component>

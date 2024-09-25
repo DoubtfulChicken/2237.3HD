@@ -19,7 +19,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>org.example.assignmentapp.AssignmentTrackerApp</mainClass>
+                  <mainClass>org.example.assignmentapp.Main</mainClass>
                 </transformer>
               </transformers>
             </configuration>
@@ -33,7 +33,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>org.example.assignmentapp.AssignmentTrackerApp</mainClass>
+              <mainClass>org.example.assignmentapp.Main</mainClass>
             </manifest>
           </archive>
         </configuration>
