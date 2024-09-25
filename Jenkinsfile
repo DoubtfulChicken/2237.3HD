@@ -61,17 +61,16 @@ pipeline {
     }
 }
         
-        stage('Release') {
+         stage('Release') {
             steps {
                 createGitHubRelease repository: 'DoubtfulChicken/2237.3HD',
                                     tag: "v1.0.${env.BUILD_NUMBER}",
                                     name: "Release v1.0.${env.BUILD_NUMBER}",
-                                    bodyText: "Release notes for build ${env.BUILD_NUMBER}",
+                                    bodyText: "Release notes...",
+                                    commitish: 'release-v1.0',  // Use the new release branch
                                     draft: false,
                                     prerelease: false,
                                     credentialId: 'github-token'
-            }
-        }
         
         stage('Monitoring and Alerting') {
             steps {
