@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4365c28-09ef-4ced-94b3-8ddc1c79d140" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/assignmentapp/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignmentapp/AssignmentTrackerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignmentapp/AssignmentTrackerApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "Debugger_Data_Views_Java",
+    "settings.editor.selected.configurable": "preferences.applicationServers",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -96,9 +94,9 @@
       <command value="mvn clean" />
       <command value="mvn depenency:analyze" />
       <command value="mvn dependency:analyze" />
-      <command value="mvn dependency:tree" />
       <command value="mvn clean install" />
       <command value="mvn clean package" />
+      <command value="mvn dependency:tree" />
     </option>
   </component>
   <component name="RunManager" selected="Application.AssignmentTrackerApp">
@@ -227,7 +225,8 @@
       <workItem from="1727251500154" duration="14000" />
       <workItem from="1727253329456" duration="256000" />
       <workItem from="1727254204481" duration="281000" />
-      <workItem from="1727255394188" duration="1345000" />
+      <workItem from="1727255394188" duration="1497000" />
+      <workItem from="1727261008976" duration="753000" />
     </task>
     <servers />
   </component>
