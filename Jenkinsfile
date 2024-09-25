@@ -7,7 +7,9 @@ pipeline {
         stage('Check Environment') {
             steps {
                 bat 'echo %JAVA_HOME%'
+                bat 'echo %MAVEN_HOME%'
                 bat 'java -version'
+                bat 'mvn -version'
             }
         }
         stage('Build') {
