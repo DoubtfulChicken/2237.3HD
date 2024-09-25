@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Running the Build stage...'
+                script {
+                    // Compile and package the application using Maven
+                    sh 'mvn clean package'
+                }
             }
         }
         stage('Test') {
