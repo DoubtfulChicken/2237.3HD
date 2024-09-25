@@ -35,9 +35,19 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Running the Deploy stage...'
+                script {
+                    bat 'docker build -t assignmentapp:latest .'  // Build the Docker image
+                }
+            }
+        }
+
+        stage('Deploy Docker Container') {
+            steps {
+                script {
+                    bat 'docker run -d -p 8080:8080 --name assignmentapp assignmentapp:latest'  // Run the Docker container
+                }
             }
         }
         stage('Release') {
