@@ -1,11 +1,11 @@
-# Use OpenJDK 21 as the base image
+# Use OpenJDK as the base image
 FROM openjdk:21-jdk-slim
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the built JAR file from the target directory to the container
-COPY target/*.jar /app/assignmentapp.jar
+# Copy the shaded JAR file to the container
+COPY target/AssignmentApp-1.0-SNAPSHOT-shaded.jar /app/assignmentapp.jar
 
-# Command to run the JAR file
+# Run the JAR file
 ENTRYPOINT ["java", "-jar", "/app/assignmentapp.jar"]
