@@ -25,6 +25,8 @@ pipeline {
                 script {
                     // Run JUnit tests using Maven
                     bat 'mvn test'
+                    // List the contents of the target directory to verify the JAR is built
+                    bat 'dir target'
                 }
             }
         }
