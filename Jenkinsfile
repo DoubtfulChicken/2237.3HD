@@ -35,10 +35,10 @@ pipeline {
                 }
             }
         }
-        stage('Build Docker Image') {
+       stage('Build Docker Image') {
             steps {
                 script {
-                    bat 'docker build -t assignmentapp:latest .'  
+                    bat 'docker build -t assignmentapp:latest .'
                 }
             }
         }
@@ -46,6 +46,10 @@ pipeline {
         stage('Deploy Docker Container') {
             steps {
                 script {
+                    // remove any existing container with the name 'assignmentapp'
+                    bat 'docker rm -f assignmentapp || true'
+                    
+                    // Run the new Docker container on port 8085 (or any available port)
                     bat 'docker run -d -p 8085:8080 --name assignmentapp assignmentapp:latest'
                 }
             }
