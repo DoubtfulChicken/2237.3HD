@@ -1,5 +1,5 @@
 # Use OpenJDK as the base image
-FROM openjdk:21-jdk-slim
+FROM ghcr.io/openjdkfx/openjdk-jfx:21
 
 # Set the working directory inside the container
 WORKDIR /app
