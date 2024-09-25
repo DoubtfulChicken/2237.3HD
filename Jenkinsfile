@@ -11,7 +11,10 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Running the Test stage...'
+                script {
+                    // Run unit tests using Maven
+                    bat 'mvn test'
+                }
             }
         }
         stage('Code Quality Analysis') {
