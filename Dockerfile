@@ -1,6 +1,5 @@
 # Use OpenJDK as the base image
-FROM ghcr.io/openjdkfx/openjdk-jfx:21
-
+FROM utensils/opengl:20.0.6
 # Set the working directory inside the container
 WORKDIR /app
 
