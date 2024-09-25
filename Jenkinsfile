@@ -46,7 +46,7 @@ pipeline {
         stage('Deploy Docker Container') {
             steps {
                 script {
-                    bat 'docker run -d -p 8080:8080 --name assignmentapp assignmentapp:latest'
+                    bat 'docker run -d -p 8085:8080 --name assignmentapp assignmentapp:latest'
                 }
             }
         }
