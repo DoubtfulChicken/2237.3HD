@@ -37,25 +37,26 @@ pipeline {
                 }
             }
         }
-       stage('Build Docker Image') {
+       stage('Deploy to Tomcat') {
             steps {
                 script {
-                    bat 'docker build -t assignmentapp:latest .'
-                }
-            }
-        }
+                    // Define environment variables for Tomcat deployment
+                    def WAR_FILE = 'target/your-javafx-app.war'  // Update with your WAR file name
+                    def TOMCAT_USER = 'admin'
+                    def TOMCAT_PASS = 'admin'
+                    def TOMCAT_URL = 'http://localhost:8090'  // Update to your Tomcat URL and port
+                    def DEPLOY_PATH = "http://localhost:8090/manager/text/deploy?path=/your-app&update=true"  // Update the path
 
-        stage('Deploy Docker Container') {
-            steps {
-                script {
-                    // remove any existing container with the name 'assignmentapp'
-                    bat 'docker rm -f assignmentapp || true'
-                    
-                    // Run the new Docker container on port 8085 (or any available port)
-                    bat 'docker run -d -p 8085:8080 --name assignmentapp assignmentapp:latest'
+                    // Use curl to deploy the WAR file to Tomcat
+                    bat """
+                    curl --upload-file target/APPENDWITHNEW.war \
+                         --user admin:admin \
+                         http://localhost:8090/manager/text/deploy?path=/your-app&update=true
+                    """
                 }
             }
         }
+        
         stage('Release') {
             steps {
                 echo 'Running the Release stage...'
