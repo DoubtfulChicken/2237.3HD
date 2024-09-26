@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Create a New Assignment</h1>
-<form action="/save" method="post" th:object="${assignment}">
+<form action="/AssignmentTracker/save" method="post" th:object="${assignment}">
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" th:field="*{name}"><br><br>
 
