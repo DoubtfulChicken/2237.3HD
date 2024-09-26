@@ -32,4 +32,9 @@ public class AssignmentController {
         assignments.add(assignment);
         return "redirect:/";
     }
+
+    @PostMapping("/simulate-error")
+    public String simulateError() {
+        throw new RuntimeException("Simulated error for monitoring purposes");
+    }
 }
