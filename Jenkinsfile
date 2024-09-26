@@ -47,7 +47,7 @@ pipeline {
                     def TOMCAT_USER = 'admin'
                     def TOMCAT_PASS = 'admin'
                     def TOMCAT_URL = 'http://localhost:8090'
-                    def DEPLOY_PATH = "${TOMCAT_URL}/manager/text/deploy?path=/AssignmentTraacker&update=true"
+                    def DEPLOY_PATH = "${TOMCAT_URL}/manager/text/deploy?path=/AssignmentTracker&update=true"
 
                     bat """
                     curl --upload-file ${WAR_FILE} \
