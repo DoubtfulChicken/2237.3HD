@@ -63,7 +63,7 @@ pipeline {
         always {
             script {
                 // Notify Prometheus to scrape Jenkins metrics
-                def prometheusURL = 'http://localhost:9090/-/reload'
+                def prometheusURL = 'http://localhost:9090/'
                 bat "curl -X POST ${prometheusURL}"
             }
         }
