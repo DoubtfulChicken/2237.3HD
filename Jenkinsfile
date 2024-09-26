@@ -40,14 +40,14 @@ pipeline {
             }
         }
         
-        stage('Deploy to Tomcat') {
+         stage('Deploy to Tomcat') {
             steps {
                 script {
-                    def WAR_FILE = 'C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/AssignmentTracker_Pipeline/target/AssignmentApp-1.0-SNAPSHOT.war'
+                    def WAR_FILE = 'C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/AssignmentTracker_Pipeline/target/AssignmentTracker-0.0.1-SNAPSHOT.war'
                     def TOMCAT_USER = 'admin'
                     def TOMCAT_PASS = 'admin'
                     def TOMCAT_URL = 'http://localhost:8090'
-                    def DEPLOY_PATH = "${TOMCAT_URL}/manager/text/deploy?path=/AssignmentApp&update=true"
+                    def DEPLOY_PATH = "${TOMCAT_URL}/manager/text/deploy?path=/AssignmentTraacker&update=true"
 
                     bat """
                     curl --upload-file ${WAR_FILE} \
@@ -68,7 +68,6 @@ pipeline {
             }
         }
         failure {
-            // Notify team in case of failure
             echo 'Pipeline failed!'
         }
     }
