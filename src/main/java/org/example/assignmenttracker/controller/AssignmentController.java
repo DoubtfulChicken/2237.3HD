@@ -14,6 +14,9 @@ import java.util.List;
 public class AssignmentController {
 
     private List<Assignment> assignments = new ArrayList<>();
+    public List<Assignment> getAssignments() {
+        return assignments;
+    }
 
     @GetMapping("/")
     public String home(Model model) {
